@@ -1,0 +1,1674 @@
+/* ========================================Importing Fonts===================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Grape+Nuts&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+/* ============================================================================================================- */
+
+
+/*============================================= Variables======================================================= */
+:root {
+    --primarycolor: #333;
+    --secondarycolor: #fff;
+    --tertiarycolor: #0099a3;
+    --lightgrey: (lightgrey);
+    --backgroundcolor: rgba(255, 255, 255, 0.4);
+    --transparentcolor: transparent;
+    --fontfamily1: "Courier New", Courier, monospace;
+    --fontfamily2: "Grape Nuts", cursive;
+    --fontfamily3: "Work Sans", sans-serif;
+    --fontfamily4: "Abril Fatface", serif;
+    --fontfamily5: "Alegreya Sans SC", sans-serif;
+    --fontfamily6: "Allison", cursive;
+    --boxshadow1:  5px 5px 15px rgba(0, 0, 0, 0.3),
+    -5px -5px 15px rgba(255, 255, 255, 0.5);
+    --boxshadow2: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================================================================================- */
+
+/* ==================================================Resets===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: auto;
+    min-height: auto;
+    max-height: auto;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a,
+span i,
+.adventure-text {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--secondarycolor);
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+}
+
+/* ============================================================================================================- */
+
+
+/*=============================================== Base Styles ==================================================*/
+body {
+    background: url("../images/background_img.jpg") center / cover no-repeat fixed;
+    background-color: var(--backgroundcolor);
+    background-blend-mode: lighten;
+    position: relative;
+    z-index: -1;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-rows: 1fr;
+    min-width: 450px;
+    width: 100%;
+    max-width: 1400px;
+    max-height: auto;
+    animation: waterFlow 40s ease-in-out infinite;
+}
+
+@keyframes waterFlow {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100%;
+    }
+
+    25% {
+        background-position: 50% 10%;
+        background-size: 105%;
+    }
+
+    50% {
+        background-position: 100% 20%;
+        background-size: 110%;
+    }
+
+    75% {
+        background-position: 50% 30%;
+        background-size: 105%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+        background-size: 100%;
+    }
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: var(--primarycolor);
+    font-family: var(--fontfamily3);
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--tertiarycolor);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 153, 163, 0.6);
+}
+
+.content a {
+    background-color: var(--tertiarycolor);
+    height: 30px;
+    width: 120px;
+    margin-bottom: 10px;
+    font-family: var(--fontfamily3);
+    font-size: 0.825em;
+    font-weight: 300;
+    font-style: normal;
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--secondarycolor);
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content a:hover,
+footer .main-nav ul li a:hover {
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
+    font-weight: bold;
+}
+
+input {
+    background-color: rgba(245, 245, 245, 0.7);
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    outline: none;
+    width: 300px;
+    text-align: left;
+}
+
+h1 {
+    color: var(--secondarycolor);
+    font-family: var(--fontfamily4);
+    font-size: 3em;
+    letter-spacing: 3px;
+    font-weight: 200;
+}
+
+h2 {
+    color: var(--secondarycolor);
+    font-family: var(--fontfamily2);
+    font-size: 2em;
+}
+
+section h2,
+footer h2 {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily2);
+    font-size: 2.5em;
+    font-weight: 600;
+    padding: 40px 0 40px 0;
+    text-align: center;
+}
+
+footer .grid .star-text>h2 {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily6);
+    font-size: 5em;
+    font-weight: 500;
+    padding: 0;
+}
+
+h3 {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily4);
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+h4 {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily4);
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+h5 {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily2);
+    font-size: 0.875em;
+    font-weight: bolder;
+}
+
+h6 {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily5);
+    font-size: 0.75em;
+}
+
+p {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily3);
+    font-size: 1.25em;
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+a,
+.icon,
+.why-icon {
+    font-size: 0.75em;
+    letter-spacing: 0.5px;
+}
+
+li>a {
+    color: var(--secondarycolor);
+    font-family: var(--fontfamily3);
+    font-size: 1em;
+}
+
+span {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily3);
+    font-size: 0.625em;
+    font-weight: 300;
+    font-style: normal;
+}
+
+span+span {
+    color: var(--lightgrey);
+    font-family: var(--fontfamily3);
+    font-size: 1.25em;
+    font-weight: 200;
+    font-style: normal;
+}
+
+span sub {
+    color: var(--lightgrey);
+    font-family: var(--fontfamily3);
+    font-size: 0.375em;
+    font-weight: 300;
+    font-style: normal;
+}
+
+li>span {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily5);
+    font-size: 0.75em;
+}
+
+small,
+small a {
+    color: var(--primarycolor);
+    font-family: var(--fontfamily3);
+    font-size: 0.95em;
+}
+
+section {
+    width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ============================================================================================================- */
+
+
+/* =====================================Implement the  12 column grid layout==================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+/* ============================================================================================================- */
+
+
+/* ------------------------------------------Mobile First Approach---------------------------------------------- */
+
+/* =================================================Header====================================================== */
+
+header .container .primary-nav {
+    background-color: transparent;
+    grid-template-rows: repeat(3, auto);
+}
+
+header .container .primary-nav ul {
+    grid-column: 1/-1;
+}
+
+header .container .primary-nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 13px;
+    font-size: 1.2em;
+}
+
+header .container .primary-nav ul li a span i {
+    font-size: 0.75em;
+}
+
+header .container .contact-links {
+    grid-column: 1 / -1;
+    grid-row: 2/3;
+}
+
+header .container .contact-links a {
+    padding: 5px 10px;
+}
+
+.contact-links span,
+.contact-links a {
+    display: inline-block;
+}
+
+.contact-links span:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: start;
+    margin-left: 30px;
+}
+
+.contact-links a:nth-child(2) {
+    grid-column: 2/7;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: start;
+}
+
+.contact-links span:nth-child(3) {
+    grid-column: 11;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: start;
+    margin-left: 5px;
+}
+
+.contact-links a:nth-child(4) {
+    grid-column: 11;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+    margin-left: 17px;
+}
+
+header .container .main-nav .hamburger {
+    grid-column: 11/13;
+    font-size: 2em;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--secondarycolor);
+}
+
+header .container .main-nav ul {
+    grid-column: 1/-1;
+    display: none;
+    margin: 25px;
+}
+
+header .container .main-nav ul li a {
+    padding: 10px 20px;
+    border: 2px solid var(--tertiarycolor);
+    background-color: rgba(0, 153, 163, 0.7);
+    box-shadow: 0 4px 10px rgba(0, 153, 163, 0.5);
+    color: #f3fcfd;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    width: 100%;
+}
+
+header .container .main-nav .hamburger:hover+ul {
+    display: block;
+}
+
+/* ============================================================================================================ */
+
+/* ---------------------------------------------SECTION TWO---------------------------------------------------- */
+
+/* ============================================Hero Section==================================================== */
+.container {
+    background: url("../images/banner_img.jpg") bottom center / cover no-repeat fixed;
+    min-height: 120vh;
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+
+header .container .hero-text h1,
+header .container .hero-text h2 {
+    margin-top: 117px;
+    grid-column: 2 / -1;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+header .container .hero-text h2 {
+    margin-top: 20px;
+}
+
+.form-text,
+.hero-form {
+    display: none;
+}
+
+/* ============================================================================================================- */
+
+/* ---------------------------------------------SECTION THREE--------------------------------------------------- */
+
+/* ========================================Destination Box====================================================== */
+
+main .destination-box h2 {
+    text-align: center;
+}
+
+main .destination-box .destinations-cards {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 400px;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+    /* border: 2px solid; */
+}
+
+main .destination-box .destinations-cards .destination-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* border: 2px solid; */
+}
+
+main .destination-box .destinations-cards .destination-card:hover {
+    transform: translate(5px, 1px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+}
+
+main .destination-box .destinations-cards .destination-card .destination-image img {
+    min-height: 300px;
+}
+
+main .destination-box .destinations-cards .destination-card .destination-text {
+    background-color: var(--secondarycolor);
+    margin-top: -4px;
+    width: 100%;
+    padding: 15px;
+}
+
+main .destination-box .destinations-cards .destination-card .destination-text h5 {
+    grid-column: 1/4;
+    grid-row: 1;
+    margin-bottom: 5px;
+}
+
+main .destination-box .destinations-cards .destination-card .destination-text span {
+    grid-column: 1/8;
+    grid-row: 2;
+}
+
+main .destination-box .destinations-cards .destination-card .destination-text span+span {
+    grid-column: 9/-1;
+    grid-row: 2;
+}
+
+/* ============================================================================================================ */
+
+/* ---------------------------------------------SECTION FOUR--------------------------------------------------- */
+
+/* ============================================Video Box======================================================= */
+main .video-box .video-image img {
+    grid-column: 1/-1;
+    grid-row: 1;
+    min-height: 400px;
+    height: 350px;
+}
+
+main .video-box {
+    position: relative;
+}
+
+main .video-box .video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .video-box .video-icon span:first-child {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid var(--secondarycolor);
+    display: block;
+    position: relative;
+}
+
+main .video-box .video-icon span:last-child {
+    color: var(--secondarycolor);
+    font-size: 60px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -50%);
+}
+
+/* =========================================================================================================== */
+
+/* ---------------------------------------------SECTION FIVE-------------------------------------------------- */
+
+/* ===============================================Why Box===================================================== */
+main .why-box {
+    /* border: 2px solid; */
+}
+
+main .why-box .why-cards {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 400px;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+main .why-box .why-cards .why-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    text-align: center;
+    min-height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 2px solid; */
+}
+
+main .why-box .why-cards .why-card:hover {
+    box-shadow: var(--boxshadow1)
+}
+
+main .why-box .why-cards .why-card span i {
+    color: var(--primarycolor);
+}
+
+/* ============================================================================================================*/
+
+/* ---------------------------------------------SECTION SIX---------------------------------------------------- */
+
+/* ============================================Adventure Box=================================================== */
+
+main .adventure-box .adventure-cards {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 400px;
+    justify-content: center;
+    align-content: center;
+    gap: 15px;
+    position: relative;
+    /* border: 2px solid; */
+}
+
+main .adventure-box .adventure-cards .adventure-card {
+    grid-template-rows: repeat(1, auto);
+    position: relative;
+    /* border: 2px solid; */
+    box-shadow: var(--boxshadow2)
+}
+
+main .adventure-box .adventure-cards .adventure-card:hover {
+    box-shadow: var(--boxshadow1);
+}
+
+main .adventure-box .adventure-cards .adventure-card .adventure-image {
+    grid-column: 1 / -1;
+    /* border: 2px solid; */
+}
+
+main .adventure-box .adventure-cards .adventure-card .adventure-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    min-height: 400px;
+}
+
+main .adventure-box .adventure-cards .adventure-card .adventure-text {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+/* ============================================================================================================*/
+
+/* --------------------------------------------SECTION SEVEN---------------------------------------------------- */
+
+/* -=============================================Newsletter Box================================================ */
+
+main .newsletter-box {
+    grid-template-columns: 400px;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-content: center;
+    padding: 60px 0 0 0;
+    /* border: 2px solid; */
+}
+
+main .newsletter-box .newsletter-card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 50px 0 50px;
+    /* margin: 0 10px 10px 0; */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border: 2px solid; */
+    box-shadow: var(--boxshadow1);
+}
+
+main .newsletter-box .newsletter-card:hover{
+    animation: zoom 3s infinite;
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(1.05); 
+    }
+}
+
+main .newsletter-box .newsletter-card:hover{
+    box-shadow: var(--boxshadow2);
+}
+
+main .newsletter-box .newsletter-card .newsletter-text h3,
+main .newsletter-box .newsletter-card .newsletter-text p {
+    text-align: center;
+}
+
+main .newsletter-box .newsletter-card .newsletter-form form input {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+}
+
+main .newsletter-box .newsletter-card .newsletter-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .newsletter-box .newsletter-card .newsletter-form form button {
+    margin-top: 75px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* ===========================================================================================================*/
+
+/* --------------------------------------------SECTION EIGHT-------------------------------------------------- */
+
+/* ==============================================Award Card================================================== */
+
+main .award-card h2,
+main .award-card p {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+main .award-card {
+    min-height: 600px;
+    /* border: 2px solid; */
+}
+
+main .award-card,
+main .award-card p {
+    padding: 0 0 15px 0;
+
+}
+
+main .award-card ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+main .award-card ul li {
+    display: flex;
+    align-items: center;
+}
+
+main .award-card ul li img {
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 6px;
+    margin-left: 10px;
+}
+
+main .award-card ul li .text span {
+    text-align: left;
+    font-size: 0.75em;
+    text-transform: capitalize;
+}
+
+/* =========================================================================================================== */
+
+/* ---------------------------------------------SECTION NINE-------------------------------------------------- */
+
+/* -=========================================Experience Box=================================================== */
+main .experience-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* padding: 10px; */
+    font-size: 10px;
+    width: 100%;
+    /* border: 2px solid; */
+}
+
+main .experience-box .content {
+    grid-template-rows: repeat(2, auto);
+}
+
+main .experience-box .content p {
+    grid-column: 3/11;
+    grid-row: 1;
+    margin-top: -35px;
+}
+
+main .experience-box .content a {
+    grid-column: 10 / 11;
+    grid-row: 1;
+}
+
+/* ============================================================================================================ */
+
+/* ==============================================Footer======================================================== */
+footer {
+    padding: 20px;
+    /* border: 2px solid; */
+}
+
+footer .flex,
+footer .main-nav ul,
+footer .main-nav ul li a,
+footer address {
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primarycolor);
+}
+
+
+/* ============================================================================================================- */
+
+
+
+/* ---------------------------------------RESPONSIVENESS SECTION----------------------------------------------- */
+
+/* ============================================Media Queries ===================================================*/
+
+/* ================================================SMALL MOBILE DEVICES========================================= */
+
+@media screen and (max-width: 320px) {
+
+    .container {
+        min-height: 80vh;
+    }
+
+    header .container .hero-text h1,
+    header .container .hero-text h2 {
+        font-size: 1.5em;
+    }
+
+    header .container .hero-text h1,
+    header .container .hero-text h2 {
+        grid-column: 1 / -1;
+
+    }
+
+    header .container .hero-text h2 {
+        margin-top: 20px;
+    }
+
+    span {
+        font-size: 0.625em;
+    }
+
+    span+span {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-text span+span {
+        grid-column: 10/-1;
+    }
+
+    main .experience-box .content p {
+        grid-column: 4 / 11;
+        margin-left: -5px;
+    }
+
+    footer .flex,
+    footer .main-nav ul,
+    footer .main-nav ul li a,
+    footer address {
+        padding: 14px;
+    }
+
+}
+
+/* ============================================================================================================- */
+
+/* ========================================Medium Mobile Devices================================================ */
+
+@media screen and (min-width:320px) and (max-width: 620px) {
+
+    .container {
+        min-height: 80vh;
+    }
+
+    header .container .hero-text h1,
+    header .container .hero-text h2 {
+        font-size: 1.5em;
+        grid-column: 1 / -1;
+        margin-top: 157px;
+    }
+
+    header .container .hero-text h2 {
+        margin-top: 20px;
+    }
+
+    span {
+        font-size: 0.625em;
+    }
+
+    span+span {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-text span+span {
+        grid-column: 10/-1;
+    }
+
+    footer .flex,
+    footer .main-nav ul,
+    footer .main-nav ul li a,
+    footer address {
+        padding: 12px;
+    }
+}
+
+/* ============================================================================================================= */
+
+/* ================================== large mobile devices====================================================== */
+
+@media (min-width: 620px) and (max-width: 919px) {
+
+    header .container .hero-text h1,
+    header .container .hero-text h2 {
+        font-size: 2em;
+    }
+
+    .container {
+        min-height: 80vh;
+    }
+
+    main .newsletter-box {
+        grid-template-columns: 463px;
+    }
+
+}
+
+/* ============================================================================================================= */
+
+
+/* ========================================SMALL DESKTOP OR LANDSCAPE TABLET STYLE===============================*/
+
+@media screen and (min-width:920px) and (max-width:1199px) {
+    body {
+        font-size: 20px;
+    }
+
+    header .container .main-nav .hamburger {
+        display: none;
+    }
+
+    header .container .main-nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, 120px);
+        grid-template-rows: 50px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+
+    }
+
+    header .container .main-nav ul li a {
+        font-weight: 400;
+        background-color: var(--transparentcolor);
+        border: none;
+        box-shadow: none;
+    }
+
+    header .container .main-nav ul li:hover {
+        background-color: var(--secondarycolor);
+        border-radius: 10px;
+    }
+
+    header .container .main-nav ul li:hover a {
+        color: var(--tertiarycolor);
+        font-weight: bold;
+    }
+
+    header .container .primary-nav {
+        background-color: transparent;
+        grid-template-rows: repeat(1, 50px);
+        /* border: 2px solid; */
+    }
+
+    header .container .primary-nav ul {
+        grid-column: 1/3;
+    }
+
+    header .container .contact-links {
+        grid-column: 7 / -1;
+        grid-row: 1;
+        /* border: 2px solid; */
+    }
+
+    .hero-form form {
+        width: 80%;
+        height: 70px;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-text ul {
+        padding-top: 0;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--tertiarycolor);
+        width: 50%;
+        height: 44px;
+    }
+
+    .form-text ul li a {
+        padding: 10px 30px;
+    }
+
+    .form-text ul li a {
+        position: relative;
+        text-decoration: none;
+        color: var(--secondarycolor);
+    }
+
+    .form-text ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 5px;
+        left: 20px;
+        background-color: var(--secondarycolor);
+        transition: width 0.5s ease;
+    }
+
+    .form-text ul li a:hover::after {
+        width: 50%;
+        animation: underline 0.5s ease forwards;
+    }
+
+    @keyframes underline {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 66%;
+        }
+    }
+
+    form select {
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        font-family: var(--fontfamily5);
+        font-size: 12px;
+        width: 100%;
+        max-width: 200px;
+        border-right: 1px solid #C7C7C7;
+        appearance: none;
+    }
+
+    form select:nth-of-type(1),
+    form select:nth-of-type(2) {
+        appearance: auto;
+    }
+
+    .hero-form #from,
+    .hero-form #to,
+    .hero-form #departure,
+    .hero-form #return,
+    .hero-form #s-class {
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    .hero-form select #departure,
+    .hero-form select #to,
+    .hero-form select #from,
+    .hero-form select #return,
+    .hero-form select #s-class {
+        margin-left: 10px;
+    }
+
+    .hero-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-form span i {
+        margin-left: 25px;
+        color: var(--primarycolor);
+        font-size: 1em;
+    }
+
+    .contact-links span:nth-child(1) {
+        grid-column: 6;
+        margin-left: 10px;
+        justify-self: end;
+    }
+
+    .contact-links a:nth-child(2) {
+        justify-self: end;
+        grid-column: 6/11;
+    }
+
+    .contact-links span:nth-child(3),
+    .contact-links a:nth-child(4) {
+        grid-column: 12;
+    }
+
+    section h2 {
+        padding: 80px 0 80px 0;
+    }
+
+    main .video-box {
+        padding: 80px 0 0 0;
+    }
+
+    header .container .hero-text h1,
+    header .container .hero-text h2 {
+        grid-column: 1/-1;
+    }
+
+    main .destination-box .destinations-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: 388px;
+        /* border: 2px solid; */
+        gap: 15px;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-image img {
+        min-height: 300px;
+        object-fit: cover;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-text h5 {
+        grid-column: 1 / 7;
+    }
+
+    main .destination-box .destinations-cards .destination-card {
+        grid-column: span 1;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-text span+span {
+        grid-column: 7/-1;
+        grid-row: 2;
+    }
+
+    main .video-box .video-icon {
+        transform: translate(-43%, -7%);
+    }
+
+    main .video-box .video-image img {
+        min-height: 500px;
+    }
+
+    main .why-box .why-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 295px);
+        grid-template-rows: 300px;
+        grid-gap: 15px;
+    }
+
+    main .why-box .why-cards .why-card {
+        grid-column: span 1;
+        grid-row: 1fr;
+    }
+
+    main .why-box .why-cards .why-card p {
+        line-height: 1.5em;
+        font-size: 1em;
+    }
+
+    main .why-box .why-cards .why-card:nth-child(3) {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    main .why-box .why-cards .why-card:nth-child(3) {
+        grid-column: 1 / -1;
+        grid-row: 5;
+    }
+
+    main .adventure-box .adventure-cards {
+        grid-template-rows: repeat(5, auto);
+        grid-template-columns: 623px;
+        justify-content: center;
+        align-content: center;
+        gap: 15px;
+        position: relative;
+        /* border: 2px solid; */
+    }
+
+    main .adventure-box .adventure-cards .adventure-card {
+        grid-template-rows: repeat(1, auto);
+        position: relative;
+        /* border: 2px solid; */
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-image {
+        grid-column: 1 / -1;
+        /* border: 2px solid; */
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-text {
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 40%;
+        transform: translateX(-50%);
+        z-index: 4;
+    }
+
+    main .newsletter-box,
+    main .award-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .award-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 700px;
+    }
+
+    main .award-card h2 {
+        margin-top: -100px;
+    }
+
+    main .newsletter-box {
+        display: grid;
+        grid-template-columns: repeat(2, 400px);
+        grid-template-rows: 800px;
+        gap: 0 20px;
+    }
+
+    main .award-card ul li .text span {
+        font-size: 0.45em;
+    }
+
+    main .award-card ul {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-form form input {
+        margin-bottom: 50px;
+        width: 320px;
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-text h3 {
+        margin-top: 80px;
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-text p {
+        padding: 20px 0;
+    }
+
+    main .newsletter-box .newsletter-card {
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px 25px 0 25px;
+    }
+
+    main .experience-box .content p {
+        grid-column: 5 / 9;
+        margin-left: 15px;
+        margin-top: -60px;
+    }
+
+    main .experience-box .content a {
+        grid-column: 8 / 10;
+        grid-row: 1;
+    }
+
+}
+
+/* ============================================================================================================= */
+
+/* ===========================================Desktop Styles==================================================== */
+@media screen and (min-width:1200px) {
+    body {
+        font-size: 20px;
+    }
+
+    header .container .main-nav .hamburger {
+        display: none;
+    }
+
+    header .container .main-nav {
+        /* position: fixed; */
+    }
+
+    header .container .main-nav ul {
+        display: grid;
+        grid-template-columns: repeat(5, 120px);
+        grid-template-rows: 50px;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+
+    }
+
+    header .container .main-nav ul li a {
+        font-weight: 400;
+        background-color: var(--transparentcolor);
+        border: none;
+        box-shadow: none;
+    }
+
+    header .container .main-nav ul li:hover {
+        background-color: var(--secondarycolor);
+        border-radius: 10px;
+    }
+
+    header .container .main-nav ul li:hover a {
+        color: var(--tertiarycolor);
+        font-weight: bold;
+    }
+
+    header .container .primary-nav {
+        background-color: transparent;
+        grid-template-rows: repeat(1, 50px);
+        /* border: 2px solid; */
+    }
+
+    header .container .primary-nav ul {
+        grid-column: 1/3;
+    }
+
+    header .container .contact-links {
+        grid-column: 8 / -1;
+        grid-row: 1;
+        /* border: 2px solid; */
+    }
+
+    .contact-links span:nth-child(1) {
+        grid-column: 6;
+        margin-left: 10px;
+        justify-self: end;
+    }
+
+    .contact-links a:nth-child(2) {
+        justify-self: end;
+        grid-column: 6/11;
+    }
+
+    .contact-links span:nth-child(3),
+    .contact-links a:nth-child(4) {
+        grid-column: 12;
+    }
+
+    .hero-form form {
+        width: 80%;
+        height: 70px;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-text ul {
+        padding-top: 0;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--tertiarycolor);
+        width: 30%;
+        height: 44px;
+    }
+
+    .form-text ul li a {
+        padding: 10px 30px;
+    }
+
+    .form-text ul li a {
+        position: relative;
+        text-decoration: none;
+        color: var(--secondarycolor);
+    }
+
+    .form-text ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 5px;
+        left: 20px;
+        background-color: var(--secondarycolor);
+        transition: width 0.5s ease;
+    }
+
+    .form-text ul li a:hover::after {
+        width: 50%;
+        animation: underline 0.5s ease forwards;
+    }
+
+    @keyframes underline {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 66%;
+        }
+    }
+
+    form select {
+        background-color: transparent;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        font-family: var(--fontfamily5);
+        font-size: 12px;
+        width: 100%;
+        max-width: 200px;
+        border-right: 1px solid #C7C7C7;
+        appearance: none;
+    }
+
+    form select:nth-of-type(1),
+    form select:nth-of-type(2) {
+        appearance: auto;
+    }
+
+    .hero-form #from,
+    .hero-form #to,
+    .hero-form #departure,
+    .hero-form #return,
+    .hero-form #s-class {
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    .hero-form select #departure,
+    .hero-form select #to,
+    .hero-form select #from,
+    .hero-form select #return,
+    .hero-form select #s-class {
+        margin-left: 10px;
+    }
+
+    .hero-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-form span i {
+        margin-left: 25px;
+        color: var(--primarycolor);
+        font-size: 1em;
+    }
+
+    section h2 {
+        padding: 80px 0 80px 0;
+    }
+
+    main .video-box {
+        padding: 80px 0 0 0;
+    }
+
+    header .container .hero-text h1,
+    header .container .hero-text h2 {
+        grid-column: 1/-1;
+    }
+
+    main .destination-box .destinations-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 240px);
+        grid-template-rows: 300px;
+        justify-content: center;
+        /* border: 2px solid; */
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-image img {
+        min-height: 220px;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-text h5 {
+        grid-column: 1 / 7;
+    }
+
+    main .destination-box .destinations-cards .destination-card {
+        grid-column: span 1;
+        grid-row: 1fr;
+    }
+
+    main .destination-box .destinations-cards .destination-card .destination-text span+span {
+        grid-column: 8/-1;
+        grid-row: 2;
+    }
+
+    span+span {
+        font-size: 0.9em;
+    }
+
+    main .video-box .video-icon {
+        transform: translate(-43%, -7%);
+    }
+
+    main .video-box .video-image img {
+        min-height: 600px;
+    }
+
+    main .why-box .why-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 323px);
+        grid-template-rows: 350px;
+        grid-gap: 15px;
+    }
+
+    main .why-box .why-cards .why-card {
+        grid-column: span 1;
+    }
+
+    main .why-box .why-cards .why-card p {
+        line-height: 1.2em;
+        font-size: 1.25em;
+    }
+
+    main .adventure-box .adventure-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 320px);
+        grid-template-rows: repeat(2, 250px);
+        gap: 20px;
+        justify-content: center;
+        position: relative;
+        padding: 20px 125px;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card:nth-child(1) {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        position: relative;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card:nth-child(2) {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        /* border: 4px solid; */
+    }
+
+    main .adventure-box .adventure-cards .adventure-card:nth-child(3) {
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card:nth-child(4) {
+        grid-column: 2 / 3;
+        grid-row: 2;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card:nth-child(5) {
+        grid-column: 3/ 4;
+        grid-row: 2;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        min-height: 300px;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-image:nth-child(1) img {
+        min-height: 140px;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-image:nth-child(2) img,
+    main .adventure-box .adventure-cards .adventure-card .adventure-image:nth-child(3) img,
+    main .adventure-box .adventure-cards .adventure-card .adventure-image:nth-child(4) img,
+    main .adventure-box .adventure-cards .adventure-card .adventure-image:nth-child(5) img {
+        min-height: 100px;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card .adventure-text {
+        padding: 13px;
+        bottom: 0;
+    }
+
+    main .adventure-box .adventure-cards .adventure-card:nth-child(1) .adventure-text {
+        width: 70%;
+        left: 35%;
+        bottom: 0;
+    }
+
+    main .newsletter-box,
+    main .award-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .award-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 700px;
+        /* margin-left: 30px; */
+    }
+
+    main .newsletter-box {
+        display: grid;
+        grid-template-columns: repeat(2, 490px);
+        grid-template-rows: 800px;
+        gap: 0 20px;
+    }
+
+    main .award-card ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-form form input {
+        margin-bottom: 50px;
+        width: 520px;
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-text h3 {
+        margin-top: 80px;
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-text p {
+        padding: 20px 0;
+    }
+
+    main .newsletter-box .newsletter-card {
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        padding: 60px 50px 0 50px;
+        height: 675px;
+    }
+
+    main .newsletter-box .newsletter-card .newsletter-form form input {
+        width: 420px;
+    }
+
+    main .experience-box .content p {
+        grid-column: 5 / 9;
+        margin-left: 36px;
+        margin-top: -60px;
+    }
+
+    main .experience-box .content a {
+        grid-column: 8 / 10;
+        grid-row: 1;
+    }
+
+}
+
+/*===============================================================================================================*/
+
+
+/*===================================================Mid Adjustments=============================================*/
+
+@media screen and (max-width:930px) {
+    header .container .hero-text h1 {
+        margin-top: 157px;
+    }
+}
+
+/*===============================================================================================================*/
